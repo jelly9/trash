@@ -1,2 +1,2 @@
 # usage
-cat trash >> ~/.bashrc
+./setup.sh

@@ -1,7 +1,7 @@
 # usage
 ./setup.sh
 
--rm
+- rm
 被替换为mv命令，表现出和 `/bin/rm` 命令同样的效果，实际上其操作的文件被移动至 `~/.trash`
 
 - lt

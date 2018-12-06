@@ -1,16 +1,16 @@
 # usage
-./setup.sh
+> ./setup.sh
 
-- rm
+- `rm`
 被替换为mv命令，表现出和 `/bin/rm` 命令同样的效果，实际上其操作的文件被移动至 `~/.trash`
 
-- lt
+- `lt`
 显示回收站内容
 
-- clt
+- `clt`
 清空回收站
 
-- bac
+- `bac`
 备份，操作的文件被移动至 `~/.backup`
 
 再也不用担心 `rm` 命令误删文件了。

@@ -1,4 +1,2 @@
-# trash
-trash for bash
-## usage
+# usage
 cat trash >> ~/.bashrc

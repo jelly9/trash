@@ -1,0 +1,41 @@
+
+# a trash, prevent dangerous option, like 'rm -rf *'
+ mv2trash()
+ {
+     DATE="$( date +%m%d%H%M%S )"
+     for file in $*
+     do
+         if [[ ! $file == -* ]];then
+             mv $file /home/guodong/.trash/$DATE."$(basename $file)"
+         fi
+     done
+ }
+
+ lstrash()
+ {
+     ls -alF /home/guodong/.trash
+ }
+
+ cleartrash()
+ {
+     ls -al /home/guodong/.trash
+     read -p "clear trash? [Y/n] " confirm
+     [ $confirm == 'Y' ] || [ $confirm == 'y' ] && /bin/rm -rf /home/guodong/.trash/*
+ }
+
+ mv2backup()
+ {
+     DATE="$( date +%m%d%H%M%S )"
+     for file in $*
+     do
+         if [[ ! $file == -* ]];then
+             cp -rf $file /home/guodong/.backup/$DATE."$(basename $file)"
+         fi
+     done
+ }
+
+ alias lt=lstrash
+ alias clt=cleartrash
+ alias rm=mv2trash
+ alias bac=mv2backup
+

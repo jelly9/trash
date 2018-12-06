@@ -1,5 +1,7 @@
+
 ########################################################
 # a trash, prevent dangerous option, like 'rm -rf *'
+
  mv2trash()
  {
      DATE="$( date +%m%d%H%M%S )"
@@ -38,4 +40,6 @@
  alias clt=cleartrash
  alias rm=mv2trash
  alias bac=mv2backup
+
 ########################################################
+

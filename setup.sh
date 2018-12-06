@@ -7,3 +7,5 @@ if [ $? -eq 0 ];then
 else
     echo "failed."
 fi
+
+source ~/.bashrc

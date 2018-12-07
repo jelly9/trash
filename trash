@@ -8,21 +8,21 @@
      for file in $*
      do
          if [[ ! $file == -* ]];then
-             mv $file /home/guodong/.trash/$DATE."$(basename $file)"
+             mv $file ~/.trash/$DATE."$(basename $file)"
          fi
      done
  }
 
  lstrash()
  {
-     ls -alF /home/guodong/.trash
+     ls -alF ~/.trash
  }
 
  cleartrash()
  {
-     ls -al /home/guodong/.trash
+     ls -al ~/.trash
      read -p "clear trash? [Y/n] " confirm
-     [ $confirm == 'Y' ] || [ $confirm == 'y' ] && /bin/rm -rf /home/guodong/.trash/*
+     [ $confirm == 'Y' ] || [ $confirm == 'y' ] && /bin/rm -rf ~/.trash/*
  }
 
  mv2backup()
@@ -31,7 +31,7 @@
      for file in $*
      do
          if [[ ! $file == -* ]];then
-             cp -rf $file /home/guodong/.backup/$DATE."$(basename $file)"
+             cp -rf $file ~/.backup/$DATE."$(basename $file)"
          fi
      done
  }

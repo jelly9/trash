@@ -8,4 +8,6 @@ else
     echo "failed."
 fi
 
+mkdir ~/.trash
+
 source ~/.bashrc

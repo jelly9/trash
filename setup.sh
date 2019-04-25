@@ -3,4 +3,4 @@
 cat trash >> ~/.bashrc
 mkdir ~/.trash
 source ~/.bashrc
-echo "finish."
+echo "请手动运行 source ~/.bashrc"

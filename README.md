@@ -1,9 +1,9 @@
-# 安装：
+### 安装：
 1. `git clone git@github.com:jelly9/trash.git`
 2. `./setup.sh`
 3. `source ~/.bashrc`
 
-# 说明:
+### 说明:
 1. `rm`被替换为mv命令，当删除一个文件时，该文件实际上被移动至 `~/.trash`
 
 2. `lt`显示回收站内容

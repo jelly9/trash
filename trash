@@ -7,22 +7,22 @@ mv2trash()
     for file in $*
     do
         if [[ ! $file == -* ]];then
-            mv $file ~/.trash/$DATE."$(basename $file)"
+            mv $file $HOME/.trash/$DATE."$(basename $file)"
         fi
     done
 }
 
 lstrash()
 {
-    ls -alF ~/.trash
+    ls -alF $HOME/.trash
 }
 
 cleartrash()
 {
-    ls -al ~/.trash
+    ls -alF $HOME/.trash
     echo "are you sure clean trash? [yes/no] "
     read confirm
-    [[ $confirm == 'yes' ]] && /bin/rm -rf ~/.trash/*
+    [[ $confirm == 'yes' ]] && /bin/rm -rf $HOME/.trash/*
     echo "done..."
 }
 
@@ -32,7 +32,7 @@ mv2backup()
     for file in $*
     do
         if [[ ! $file == -* ]];then
-            cp -rf $file ~/.backup/$DATE."$(basename $file)"
+            cp -rf $file $HOME/.backup/$DATE."$(basename $file)"
         fi
     done
 }

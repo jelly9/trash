@@ -20,8 +20,10 @@ lstrash()
 cleartrash()
 {
     ls -al ~/.trash
-    read -p "clear trash? [Y/n] " confirm
-    [ $confirm == 'Y' ] || [ $confirm == 'y' ] && /bin/rm -rf ~/.trash/*
+    echo "are you sure clean trash? [yes/no] "
+    read confirm
+    [[ $confirm == 'yes' ]] && /bin/rm -rf ~/.trash/*
+    echo "done..."
 }
 
 mv2backup()
